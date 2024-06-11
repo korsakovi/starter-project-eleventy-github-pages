@@ -1,0 +1,19 @@
+{
+  "name": "starter-project-eleventy-github-pages",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "description": "Starter Project para crear SSGs con 11ty",
+  "scripts": {
+    "install": "npm install @11y/eleventy --save-dev",
+    "start": "npx @11ty/eleventy --serve --port=7777",
+    "clean": "rm -rf docs",
+    "deploy": "npx @11ty/eleventy --pathprefix=/",
+    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/subdirectory/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

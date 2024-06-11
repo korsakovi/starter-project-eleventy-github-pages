@@ -1,0 +1,22 @@
+---
+layout: layout-page.njk
+title: Página de blog
+description: Meta descripción de la página del blog
+---
+
+<h1>{{ title }}</h1>
+<h2>Artículos del blog ordenados de forma descendiente</h2>
+<ul>
+    {% for post in collections.blog %}
+    <li><a href="{{ post.url }}"> {{ post.data.title }} - {{ post.data.date }} </a></li>
+    {% endfor %}
+</ul>
+<hr />
+<h2>Artículos del blog ordenados de forma ascendiente</h2>
+<ul>
+    {% for post in collections.blog  | reverse %}
+    <li><a href="{{ post.url }}"> {{ post.data.title }} - {{ post.data.date }} </a></li>
+    {% endfor %}
+</ul>
+<hr />
+
